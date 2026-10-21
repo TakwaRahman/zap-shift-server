@@ -708,7 +708,7 @@ app.get('/trackings/:trackingId/logs', async (req, res) => {
 // ==================== HOME ROUTE ====================
 
 app.get('/', (req, res) => {
-    return res.send('zap shift');
+    return res.send('zap shift' + DB_NAME === undefined);
 });
 
 // ==================== ERROR HANDLER ====================
