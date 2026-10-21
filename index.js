@@ -51,7 +51,9 @@ const client = new MongoClient(uri, {
     serverSelectionTimeoutMS: 10000,
 });
 
-const db = client.db('zap_shift_db');
+const db = client.db(
+    process.env.DB_NAME || 'zap_shift_db'
+);
 
 const parcelCollection = db.collection('parcels');
 const userCollection = db.collection('users');
