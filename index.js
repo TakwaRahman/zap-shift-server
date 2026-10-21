@@ -151,6 +151,7 @@ app.post('/riders', async (req, res) => {
 
         res.status(500).send({
             message: "Failed to submit rider application",
+            error: error.message,
         });
     }
 });
